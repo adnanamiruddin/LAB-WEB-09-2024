@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Blackjack</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="asset/css/tutorials.css">
+</head>
+
+<body class="bg-gray-800 text-white min-h-screen flex flex-col items-center p-4">
+
+    <header class="w-full text-center mb-8 fade-in">
+        <h1 class="text-4xl font-bold">Blackjack Tutorial</h1>
+        <button id="back-btn"
+            class="mt-4 flex items-center text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-5 py-2.5">
+            <ion-icon name="arrow-back-outline" class="mr-2"></ion-icon> Kembali ke Menu Utama
+        </button>
+    </header>
+
+    <main class="w-full max-w-4xl bg-white bg-opacity-20 backdrop-blur-lg p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-semibold mb-6 text-lime-300 text-center">Panduan Lengkap Bermain Blackjack</h2>
+
+        <section class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-lime-200">Apa itu Blackjack?</h3>
+            <p class="mb-4 text-gray-100">
+                Blackjack adalah permainan kartu populer yang dimainkan di kasino di seluruh dunia. Tujuannya adalah
+                untuk mendapatkan nilai kartu sedekat mungkin dengan 21 tanpa melebihi angka tersebut.
+            </p>
+            <img src="asset/images/Cards/cardClubsK.png" alt="Blackjack Card" class="w-32 h-48 object-cover rounded shadow-lg mx-auto float">
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-lime-200">Aturan Dasar</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-100">
+                <li>Setiap pemain mendapatkan dua kartu awal.</li>
+                <li>Kartu bernilai angka sesuai nomor, wajah (J, Q, K) bernilai 10, dan As bisa bernilai 1 atau 11.</li>
+                <li>Anda dapat memilih untuk "Hit" (mengambil kartu tambahan) atau "Stand" (berhenti mengambil kartu).</li>
+                <li>Jika total kartu melebihi 21, Anda "Bust" dan kalah.</li>
+            </ul>
+            <img src="asset/images/Cards/cardHeartsQ.png" alt="Blackjack Card" class="w-32 h-48 object-cover rounded shadow-lg mx-auto float">
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-lime-200">Strategi Dasar</h3>
+            <p class="mb-4 text-gray-100">
+                Menggunakan strategi dasar dapat meningkatkan peluang Anda untuk menang dalam Blackjack. Berikut beberapa tips:
+            </p>
+            <ul class="list-disc list-inside mb-4 text-gray-100">
+                <li>Selalu "Hit" jika total kartu Anda 11 atau kurang.</li>
+                <li>Jika total kartu Anda antara 12-16, "Stand" jika dealer memiliki kartu 2-6; "Hit" jika dealer memiliki 7 atau lebih.</li>
+                <li>Selalu "Stand" jika total kartu Anda 17 atau lebih.</li>
+                <li>Pahami kapan harus "Double Down" untuk menggandakan taruhan Anda.</li>
+            </ul>
+            <img src="asset/images/Cards/cardSpadesJ.png" alt="Blackjack Card" class="w-32 h-48 object-cover rounded shadow-lg mx-auto float">
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-lime-200">Tips dan Trik</h3>
+            <ul class="list-disc list-inside mb-4 text-gray-100">
+                <li>Kelola uang Anda dengan bijak dan tetapkan batas sebelum bermain.</li>
+                <li>Perhatikan kartu yang telah dimainkan untuk memperkirakan kartu selanjutnya.</li>
+                <li>Hindari mengambil asuransi kecuali Anda memiliki pengetahuan mendalam tentang probabilitas.</li>
+            </ul>
+            <img src="asset/images/Cards/cardJoker.png" alt="Blackjack Card" class="w-32 h-48 object-cover rounded shadow-lg mx-auto float">
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-lime-200">Variasi Permainan</h3>
+            <p class="mb-4 text-gray-100">
+                Selain versi klasik, terdapat berbagai variasi Blackjack seperti:
+            </p>
+            <ul class="list-disc list-inside mb-4 text-gray-100">
+                <li>Blackjack Surrender</li>
+                <li>Blackjack Switch</li>
+                <li>European Blackjack</li>
+                <li>Atlantic City Blackjack</li>
+            </ul>
+            <img src="asset/images/Cards/cardClubsA.png" alt="Blackjack Card" class="w-32 h-48 object-cover rounded shadow-lg mx-auto float">
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-lime-200">Kesimpulan</h3>
+            <p class="text-gray-100">
+                Blackjack adalah permainan yang menggabungkan keberuntungan dan strategi. Dengan memahami aturan dasar dan menerapkan strategi yang tepat, Anda dapat meningkatkan peluang Anda untuk menang.
+            </p>
+        </section>
+
+    </main>
+
+
+    <audio id="button-sound" src="asset/audio/attribute/start.mp3"></audio>
+
+    <script src="asset/js/tutorials.js"></script>
+
+</body>
+
+</html>

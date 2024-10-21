@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="asset/css/index.css">
+</head>
+
+<body class="bg-gray-800 text-white min-h-screen flex flex-col">
+
+    <!-- Main Content with 3D Slider -->
+    <main class="flex-grow p-4">
+        <div class="banner w-full h-screen justify-center text-center overflow-hidden absolute">
+            <div class="slider absolute w-[200px] h-[250px] top-[10%] left-[calc(50%-100px)] transform-style-preserve-3d transform-perspective-[1000px] animate-[autoRun_20s_linear_infinite] z-[2]"
+                style="--quantity: 10">
+                <div class="item" style="--position: 1"><img src="asset/images/Cards/cardClubsK.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 2"><img src="asset/images/Cards/cardHeartsQ.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 3"><img src="asset/images/Cards/cardSpadesJ.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 4"><img src="asset/images/Cards/cardJoker.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 5"><img src="asset/images/Cards/cardClubsA.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 6"><img src="asset/images/Cards/cardDiamonds2.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 7"><img src="asset/images/Cards/cardSpades3.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 8"><img src="asset/images/Cards/cardHearts4.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 9"><img src="asset/images/Cards/cardSpades5.png"
+                        class="w-full h-full object-cover"></div>
+                <div class="item" style="--position: 10"><img src="asset/images/Cards/cardDiamonds6.png"
+                        class="w-full h-full object-cover"></div>
+            </div>
+            <div class="model absolute inset-x-0 bottom-0 h-[75vh] z-[1]"></div>
+        </div>
+
+
+        <div
+            class="absolute w-full max-w-lg text-center bottom-0 left-1/2 transform -translate-x-1/2 mt-[50px] md:mb-[20px] md:bottom-4 lg:bottom-8 z-10">
+
+            <button type="button"
+                class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                <ion-icon name="play-outline" class="mr-2"></ion-icon> Play
+            </button>
+
+            <button type="button"
+                class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                <ion-icon name="settings-outline" class="mr-2"></ion-icon> Settings
+            </button>
+
+            <button type="button"
+                class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                <ion-icon name="help-circle-outline" class="mr-2"></ion-icon> Tutorials
+            </button>
+
+            <button type="button"
+                class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                <ion-icon name="book-outline" class="mr-2"></ion-icon> Credit
+            </button>
+
+        </div>
+    </main>
+
+    <!-- Audio Element -->
+    <audio id="button-sound" src="asset\audio\attribute\start.mp3"></audio>
+
+    <!-- Modal for Options -->
+    <div id="options-modal"
+        class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-[10000]">
+        <div class="bg-white text-black p-6 rounded-lg shadow-lg w-[90%] max-w-lg relative z-10">
+            <h2 class="text-2xl font-bold mb-4 text-red-600">Game Settings</h2>
+
+            <!-- Setting Options -->
+            <div class="flex flex-col space-y-4">
+                <!-- Volume Control -->
+                <div class="flex justify-between items-center">
+                    <label for="volume" class="text-red-600 font-semibold">Volume</label>
+                    <input type="range" id="volume" name="volume" min="0" max="100" class="w-1/2">
+                </div>
+
+                <!-- Difficulty Setting -->
+                <div class="flex justify-between items-center">
+                    <label for="difficulty" class="text-red-600 font-semibold">Difficulty</label>
+                    <select id="difficulty" class="w-1/2 border border-red-600 text-red-600 rounded-md p-2">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+                <!-- Theme Setting -->
+                <div class="flex justify-between items-center">
+                    <label for="theme" class="text-red-600 font-semibold">Theme</label>
+                    <select id="theme" class="w-1/2 border border-red-600 text-red-600 rounded-md p-2">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Close Button -->
+            <button id="close-modal" class="mt-6 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full">
+                Close
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Custom JS -->
+    <script src="asset/js/index.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

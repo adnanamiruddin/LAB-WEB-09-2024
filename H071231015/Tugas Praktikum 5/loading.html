@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="asset/css/loading.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="flex flex-col items-center">
+        <div class="loaderViewPort mb-6">
+            <div class="loader">
+                <div class="side front">
+                    <div class="dot"></div>
+                </div>
+                <div class="side back">
+                    <div class="dotContainer">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                <div class="side left">
+                    <div class="dotContainer">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div class="dotContainer">
+                        <div class="subDotContainer">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="subDotContainer">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side top">
+                    <div class="dotContainer">
+                        <div class="subDotContainer">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="subDotContainer">
+                            <div class="dot"></div>
+                        </div>
+                        <div class="subDotContainer">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="side bottom">
+                    <div class="dotContainer">
+                        <div class="subDotContainer">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="subDotContainer">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="subDotContainer">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-64">
+            <div class="progress-bar-wrapper">
+                <div id="progress-bar" class="relative pt-1">
+                    <div class="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                        <div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500" style="width: 0%" id="progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+    <script src="asset/js/loading.js"></script>
+</body>
+
+</html>
