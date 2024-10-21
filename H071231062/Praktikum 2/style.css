@@ -1,0 +1,341 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAV */
+
+.navbar{
+    background-color: darkslateblue;
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo2 img{
+    width: 40px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2rem;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    padding: 8px 0;
+    color: whitesmoke;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.navbar ul li a:hover{
+    color: pink;
+   
+}
+
+/* zect 1 */
+
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 5%;
+    background-color: rgb(173, 165, 157);
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+}
+
+.col1{
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.col2{
+    flex: 1;
+}
+
+.col2 img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sub{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.jiko {
+    font-style: italic;
+}
+
+p{
+    margin-bottom: 1rem;
+}
+
+/* sect 2 */
+.about{
+    margin-top: 2rem;
+    padding: 5rem;
+    
+}
+.kata {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+.about-content, .about-content2 {
+    width: 48%; 
+}
+
+.about h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.foto {
+    width: 100%;
+    height: auto;
+    background-color: rgb(173, 165, 157);
+}
+/*sect 3*/
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+ 
+    
+  
+}
+
+.gallery .img{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+}
+.foto h2{
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    padding-left: 80px;
+    padding-top: 40px;
+   
+}
+
+.img img:hover{
+    transform: scale(1.05);
+}
+
+footer{
+    align-items: center;
+    background-color: darkslateblue;
+    color: whitesmoke;
+    padding: 20px;
+    margin-top: 30px;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.foot .logo img{
+    width: 60px;
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.info p{
+   margin: 5px 0 ;
+}
+
+.footer .info{
+    text-align: right;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    .navbar ul {
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo2 img{
+        width: 40px;
+        margin-bottom: 10px;
+    }
+    .navbar ul li a{
+        font-size: 16px;
+    }
+    .container{
+        padding: 20px;
+        text-align: center;
+    }
+
+    .row{
+        flex-direction: column-reverse;
+        padding: 1.5rem;
+        align-items: center;
+        padding-top: 200px;
+    }
+
+    .col1,.col2{
+        padding: 0 ;
+        width: 100%;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .col2 img{
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+    }
+    .sub{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .jiko{
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .about{
+        padding: 2rem;
+    }
+    .kata{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .about-content,.about-content2{
+        width: 100%;
+    }
+    .gallery{
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
+    }
+    .foto h2{
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .foot{
+        flex-direction: column;
+        align-items: center;
+    }
+    .foot .logo img{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .info{
+        text-align: center;
+    }
+}
+
+@media(max-width: 480px){
+    .navbar{
+        flex-direction: column;
+        padding: 0.5rem 0;
+        align-items: center;
+    }
+    .logo2 img{
+        width: 30px;
+    }
+    .navbar ul{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .navbar ul li a{
+        font-size: 14px;
+        padding: 4px 0;
+    }
+    .container{
+        padding:  10px;
+    }
+    .row{
+        padding: 1rem;
+        padding-top: 200px;
+    }
+    h1{
+        font-size: 1.2rem;
+    }
+    .sub{
+        font-size: 1.2rem;
+    }
+    .col2 img{
+        width: 70%;
+    }
+    .about{
+        padding: 1.5rem;
+    }
+    .about h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+    .img{
+        width: 100%;
+        height: auto;
+    }
+    footer{
+        padding: 1rem;
+    }
+    .foot{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info p{
+        margin: 3px 0;
+        text-align: center;
+    }
+}
