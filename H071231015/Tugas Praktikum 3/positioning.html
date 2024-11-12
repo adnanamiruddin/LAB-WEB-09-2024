@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positioning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+    <!-- margin -->
+    <div class="bg-gray-500 m-12">Margin m12</div>
+    <div class="bg-slate-500 m-8">Margin m8</div>
+
+
+    <!-- absolute position -->
+    <br>
+    <div class="bg-rose-500 absolute top-0 left-0">Absolute</div>
+
+
+    <!-- display flex -->
+    <br>
+    <div class="flex justify-center items-center gap-8">
+        <div class="bg-red-600 w-24 h-24">Box 1</div>
+        <div class="bg-yellow-400 w-24 h-24">Box 2</div>
+        <div class="bg-green-600 w-32 h-32">Box 3</div>
+    </div>
+
+
+    <!-- display grid -->
+    <br>
+    <div class="grid grid-cols-4">
+        <div class="bg-red-600">Box 1</div>
+        <div class="bg-yellow-400">Box 2</div>
+        <div class="bg-green-600 col-span-2">Box 3</div>
+    </div>
+
+
+
+    <!-- custom value -->
+    <br>
+    <div class="bg-[#d7f593] w-[5.5rem]">Custom value 1</div>
+    <h1 class="text-[#fee56e] text-3xl font-bold">text custom</h1>
+
+</body>
+</html>
