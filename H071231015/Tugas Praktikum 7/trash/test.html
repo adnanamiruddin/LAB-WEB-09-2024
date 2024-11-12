@@ -1,0 +1,74 @@
+<?php
+session_start();
+require_once 'data.php';
+
+$timeout = 1800;
+
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $timeout)) {
+    session_unset();
+    session_destroy();
+    header('Location: login.php?error=session_timeout');
+    exit;
+}
+
+$_SESSION['last_activity'] = time();
+
+if (!isLogin()) {
+    header('Location: login.php');
+    exit;
+}
+
+$user = $_SESSION['user'];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['logout'])) {
+        session_destroy();
+        header('Location: login.php');
+        exit;
+    } elseif (isset($_POST['delete_user'])) {
+        $emailToDelete = $_POST['delete_user'];
+
+        // Hapus akun
+        deleteUser($emailToDelete);
+
+        // Jika user yang login menghapus akun mereka sendiri
+        if ($emailToDelete === $user['email']) {
+            // Hanya jika bukan admin, langsung redirect ke login
+            if ($user['email'] !== 'admin@gmail.com') {
+                session_destroy();
+                header('Location: login.php?message=account_deleted');
+                exit;
+            }
+        }
+
+        // Jika admin menghapus akun user lain, tetap di dashboard
+        header('Location: dashboard.php');
+        exit;
+    }
+}
+
+$users = json_decode(file_get_contents('users.json'), true);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <div class="container mx-auto py-10">
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-lg mx-auto text-center">
+            <h1 class="text-3xl font-bold text-gray-800">Welcome, <?= htmlspecialchars($user['name']); ?>!</h1>
+            <p class="text-gray-600 mt-2"><?= htmlspecialchars($user['email']); ?></p>
+        </div>
+
+    
