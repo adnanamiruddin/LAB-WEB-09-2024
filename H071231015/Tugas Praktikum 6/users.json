@@ -1,0 +1,62 @@
+[
+    {
+        "email": "admin@gmail.com",
+        "username": "adminxxx",
+        "name": "Admin",
+        "password": "$2y$10$u\/yU3gwntSkr3F2j9BFHHuvRHPq6N5yie2RMkTzdS4FVFvxKmvCeG"
+    },
+    {
+        "email": "nanda@gmail.com",
+        "username": "nanda_aja1",
+        "name": "Wd. Ananda Lesmono",
+        "password": "$2y$10$zDa07axb1EpF1d0oCJMfj.wealLRCWQSwrXw0gik8akdu3V01RLTe",
+        "gender": "Female",
+        "faculty": "MIPA",
+        "batch": "2021"
+    },
+    {
+        "email": "arif@gmail.com",
+        "username": "arif_nich",
+        "name": "Muhammad Arief",
+        "password": "$2y$10$ZuUtTUHOwVOCB5SpDag\/R.\/mWmwS4XQuyD2B8U.ffyWp8tHBFNGXW",
+        "gender": "Male",
+        "faculty": "Hukum",
+        "batch": "2021"
+    },
+    {
+        "email": "eka@gmail.com",
+        "username": "eka59",
+        "name": "Eka Hanny",
+        "password": "$2y$10$hfmWWl980xqaikjyBvx5iukTkfCVkjgURoHfcmU\/.5uzkj62CpMaG",
+        "gender": "Female",
+        "faculty": "Keperawatan",
+        "batch": "2021"
+    },
+    {
+        "email": "adnan@gmail.com",
+        "username": "adnan72",
+        "name": "Adnan",
+        "password": "$2y$10$IHM8lpdQRBUTAZtVHe7B4u10Wz4WJmdhCHf3ZU75ZKhp0GdoOLAIm",
+        "gender": "Male",
+        "faculty": "Teknik",
+        "batch": "2020"
+    },
+    {
+        "name": "Rudy Peter",
+        "username": "rud",
+        "email": "rudypetere@gmail.com",
+        "password": "$2y$10$5\/c6stNHm9tOEs3dhxKmwu\/.pHDQL73z0qbB0YycCq0otgG8PFiUO",
+        "gender": "Male",
+        "faculty": "1",
+        "batch": "1"
+    },
+    {
+        "name": "Rudy",
+        "username": "rudyyyy",
+        "email": "rudypetere@gmail.com",
+        "password": "$2y$10$XEF5JYpAIIfrfFbySHLKZOrAWxBsIOIyYJvZyVild6apieMaMMqTW",
+        "gender": "Male",
+        "faculty": "1",
+        "batch": "1"
+    }
+]
