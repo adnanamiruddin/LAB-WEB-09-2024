@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Blackjack (Haram)</h1>
+      </div>
+      <div id="saldo" class="saldo">Saldo: Rp 5000</div>
+      <div class="game-area">
+        <div id="dealer-area" class="dealer-area">
+          <h2>Dealer</h2>
+          <div class="cards"></div>
+          <p id="dealer-score">Total: ?</p>
+        </div>
+        <div id="player-area" class="player-area">
+          <h2>Pemain</h2>
+          <div class="cards"></div>
+          <p id="player-score">Total: 0</p>
+        </div>
+      </div>
+      <div class="bet-area">
+        <div class="chip chip-100">100</div>
+        <div class="chip chip-500">500</div>
+        <div class="chip chip-1000">1K</div>
+      </div>
+      <div class="controls">
+        <button id="hit-button">Hit</button>
+        <button id="stay-button">Stay</button>
+        <button id="new-game-button">Try again</button>
+      </div>
+
+      <div id="bet-display">
+        <p>Taruhan Saat Ini: <span id="current-bet">0</span></p>
+      </div>
+    </div>
+    <script src="javaScript.js"></script>
+  </body>
+</html>

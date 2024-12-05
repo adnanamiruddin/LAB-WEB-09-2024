@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 04</title>
+</head>
+<body>
+    <script>
+        let angkaRandom = 1 + Math.floor(Math.random() * 100); 
+        let percobaan = 0;
+
+        function temukan(tebakan, angka) {
+            percobaan++;
+
+            if (isNaN(tebakan)){
+                alert ("Input harus angka!!!")
+                return false;
+            }
+
+            if (tebakan < angka) {
+                alert("Terlalu rendah! Coba Lagi");
+                return false; 
+            } else if (tebakan > angka) {
+                alert("Terlalu tinggi! Coba Lagi");
+                return false; 
+            } else {
+                alert(`Tebakan Anda benar! Anda telah mencoba ${percobaan} kali.`);
+                return true;
+            }
+        }
+
+        let angkaTebakan = prompt("Masukkan salah satu angka dari 1 sampai 100 : ");
+        while (!temukan(angkaTebakan, angkaRandom)) {
+            angkaTebakan = prompt("Masukkan salah satu angka dari 1 sampai 100 :");
+        }
+    </script>
+</body>

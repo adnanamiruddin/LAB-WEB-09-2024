@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 04</title>
+</head>
+<body>
+    <h1>Praktikum 04: Menghubungkan JavaScript</h1>
+    <script>
+        function hitungHari(hariSekarang, jumlahHari) {
+            const hari = ["minggu", "senin", "selasa", "rabu", "kamis", "jumat", "sabtu"];
+            const toDay = hari.indexOf(hariSekarang.toLowerCase());
+
+            if (toDay === -1) {
+                return "Nama hari yang Anda masukkan tidak valid.";
+            }
+            const tomorrow = (toDay + jumlahHari) % 7;
+            return hari[tomorrow];
+        }
+
+        const hariSekarang = prompt("Masukkan hari saat ini:").toLowerCase();
+        const jumlahHari = Number(prompt("Masukkan jumlah hari ke depan:"));
+
+        console.log(jumlahHari + " hari setelah hari " + hariSekarang + " adalah hari " + hitungHari(hariSekarang, jumlahHari));            
+    </script>
+</body>
