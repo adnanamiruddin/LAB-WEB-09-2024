@@ -1,0 +1,146 @@
+body {
+  background-image: url(Images/bg1.webp);
+  background-position: center;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #1e1e1e;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.game-area {
+  background-color: #0d8041;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.player-area,
+.dealer-area {
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffc500;
+}
+
+.saldo {
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.bet-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chip {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0 5px;
+  line-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chip-100 {
+  background-color: #000;
+  color: #fff;
+}
+
+.chip-500 {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.chip-1000 {
+  background-color: #0000ff;
+  color: #fff;
+}
+
+#bet-display {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#current-bet {
+  font-weight: bold;
+  color: #ff0000;
+}
+
+
+.card {
+  width: 100px;  /* Adjust based on your card image dimensions */
+  height: 145px; /* Adjust based on your card image dimensions */
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin-top: 10px;
+}

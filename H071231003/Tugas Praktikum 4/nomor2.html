@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let harga = Number(prompt("Masukan harga barang: "));
+        let jenis = prompt (("masukan jenis barang (Elektronik, Pakaian, Makanan)").toLowerCase());
+        let dis = "";
+        let diskon = 0;
+
+        if (jenis === "elektronik") {
+            // console.log("Diskon : 10%");
+            dis = "Diskon: 10%";
+            diskon = harga * 0.10;
+        }  else if (jenis === "pakaian") {
+            // console.log("Diskon : 20%");
+            dis = "Diskon: 20%";
+            diskon = harga * 0.20;
+        }else if (jenis === "makanan"){
+            // console.log("Diskon : 5%");
+            dis = "Diskon: 5%";
+            diskon = harga * 0.05;
+        } else {
+            console.log("Tidak ada diskon");
+        }
+
+        console.log("Harga awal : Rp ", + harga);
+        console.log(dis);
+        console.log("Harga setelah diskon : Rp", + (harga-diskon));
+    </script>
+</body>
+</html>
